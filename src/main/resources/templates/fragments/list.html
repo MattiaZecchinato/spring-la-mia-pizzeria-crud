@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <ul th:fragment="list(list, basePath)" class="list-group" style="width: 15rem;">
+    <ul th:fragment="list(list, basePath)" class="list-group mb-3" style="width: 15rem;">
         <li th:each="elem : ${list}" th:object="${elem}" class="list-group-item">
             <a th:href="@{|${basePath}/*{id}|}" th:text="*{name}"></a>
         </li>
