@@ -10,6 +10,13 @@
 
 <body>
     <header th:insert="~{fragments/navbar :: navbar('Pizzeria', '/', 'Home', '/', 'Pizzas', '/pizzas')}"></header>
+
+    <h1 class="text-center">Pizzas List</h1>
+
+    <div class="d-flex flex-column align-items-center mt-3">
+        <th:block th:replace="~{fragments/list :: list(${pizzasList}, '/pizzas')}"></th:block>
+    </div>
+
 </body>
 
 </html>
