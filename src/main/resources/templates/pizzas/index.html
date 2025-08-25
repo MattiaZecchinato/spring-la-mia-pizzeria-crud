@@ -14,7 +14,11 @@
     <h1 class="text-center">Pizzas List</h1>
 
     <div class="d-flex flex-column align-items-center mt-3">
-        <th:block th:replace="~{fragments/list :: list(${pizzasList}, '/pizzas')}"></th:block>
+        <h3 th:if="${pizzasList.size() == 0}">No pizzas found</h3>
+        <th:block th:if="${pizzasList.size() > 0}" th:replace="~{fragments/list :: list(${pizzasList}, '/pizzas')}">
+        </th:block>
+        <th:block th:replace="~{fragments/searchBar :: searchBar('/pizzas')}"></th:block>
+        <a th:href="@{/pizzas}" class="btn btn-primary mt-3">Clear</a>
     </div>
 
 </body>
