@@ -18,7 +18,7 @@
         <th:block th:if="${pizzasList.size() > 0}" th:replace="~{fragments/list :: list(${pizzasList}, '/pizzas')}">
         </th:block>
         <th:block th:replace="~{fragments/searchBar :: searchBar('/pizzas')}"></th:block>
-        <a th:href="@{/pizzas}" class="btn btn-primary mt-3">Clear</a>
+        <a th:href="@{/pizzas/create}" class="btn btn-primary mt-3">Add Pizza</a>
     </div>
 
 </body>
