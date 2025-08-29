@@ -11,6 +11,7 @@
         <div class="card-body">
             <h5 class="card-title">[[*{price}]]€</h5>
             <p class="card-text">[[*{description}]]</p>
+            <a th:href="@{/pizzas/update/{id}(id=*{id})}" class="btn btn-primary">Edit</a>
         </div>
     </div>
 </body>
