@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header th:insert="~{fragments/navbar :: navbar('Pizzeria', '/', 'Home', '/', 'Pizzas', '/pizzas')}"></header>
+    <header th:insert="~{fragments/navbar :: navbar}"></header>
 
     <main>
         <h1 class="text-center">[[${pizza.name}]]</h1>
